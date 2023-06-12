@@ -1,0 +1,4 @@
+﻿  MyForm.cpp
+C:\Users\admin\source\repos\Cryptography\SPZ_Kurs\SPZ_Kurs\MyForm.cpp(9,1): warning C4829: Возможно, неправильные параметры функции main. Рекомендуемый вариант - "int main(Platform::Array<Platform::String^>^ argv)"
+  Feistel.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+  SPZ_Kurs.vcxproj -> C:\Users\admin\source\repos\Cryptography\SPZ_Kurs\x64\Debug\SPZ_Kurs.exe
