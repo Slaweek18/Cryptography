@@ -41,9 +41,6 @@ namespace SPZKurs {
 	private: System::Windows::Forms::Button^ encrypt;
 	private: System::Windows::Forms::Button^ decrypt;
 
-
-
-
 	private:
 		/// <summary>
 		/// Îáÿçàòåëüíàÿ ïåðåìåííàÿ êîíñòðóêòîðà.
@@ -70,7 +67,7 @@ namespace SPZKurs {
 			// 
 			this->menuStrip1->BackColor = System::Drawing::SystemColors::Desktop;
 			this->menuStrip1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
-			this->menuStrip1->Font = (gcnew System::Drawing::Font(L"Ravie", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->menuStrip1->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->menuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
@@ -81,7 +78,7 @@ namespace SPZKurs {
 			this->menuStrip1->MaximumSize = System::Drawing::Size(245, 41);
 			this->menuStrip1->Name = L"menuStrip1";
 			this->menuStrip1->Padding = System::Windows::Forms::Padding(9, 2, 0, 2);
-			this->menuStrip1->Size = System::Drawing::Size(245, 35);
+			this->menuStrip1->Size = System::Drawing::Size(245, 33);
 			this->menuStrip1->Stretch = false;
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
@@ -90,15 +87,17 @@ namespace SPZKurs {
 			// 
 			this->âèõ³äToolStripMenuItem->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->âèõ³äToolStripMenuItem->Name = L"âèõ³äToolStripMenuItem";
-			this->âèõ³äToolStripMenuItem->Size = System::Drawing::Size(75, 31);
+			this->âèõ³äToolStripMenuItem->Size = System::Drawing::Size(75, 29);
 			this->âèõ³äToolStripMenuItem->Text = L"Âèõ³ä";
+			this->âèõ³äToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::âèõ³äToolStripMenuItem_Click);
 			// 
 			// ïðîÏðîãðàìóToolStripMenuItem
 			// 
-			this->ïðîÏðîãðàìóToolStripMenuItem->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->ïðîÏðîãðàìóToolStripMenuItem->ForeColor = System::Drawing::SystemColors::ControlLightLight;
 			this->ïðîÏðîãðàìóToolStripMenuItem->Name = L"ïðîÏðîãðàìóToolStripMenuItem";
-			this->ïðîÏðîãðàìóToolStripMenuItem->Size = System::Drawing::Size(158, 31);
+			this->ïðîÏðîãðàìóToolStripMenuItem->Size = System::Drawing::Size(155, 29);
 			this->ïðîÏðîãðàìóToolStripMenuItem->Text = L"Ïðî ïðîãðàìó";
+			this->ïðîÏðîãðàìóToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::ïðîÏðîãðàìóToolStripMenuItem_Click);
 			// 
 			// encrypt
 			// 
@@ -115,6 +114,7 @@ namespace SPZKurs {
 			this->encrypt->TabIndex = 1;
 			this->encrypt->Text = L"Øèôðóâàòè";
 			this->encrypt->UseVisualStyleBackColor = false;
+			this->encrypt->Click += gcnew System::EventHandler(this, &MyForm::encrypt_Click);
 			// 
 			// decrypt
 			// 
@@ -131,6 +131,7 @@ namespace SPZKurs {
 			this->decrypt->TabIndex = 2;
 			this->decrypt->Text = L"Äåøèôðóâàòè";
 			this->decrypt->UseVisualStyleBackColor = false;
+			this->decrypt->Click += gcnew System::EventHandler(this, &MyForm::decrypt_Click);
 			// 
 			// MyForm
 			// 
@@ -165,5 +166,13 @@ namespace SPZKurs {
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 
+
+	private: System::Void âèõ³äToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
+
+	private: System::Void ïðîÏðîãðàìóToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
+
+	private: System::Void encrypt_Click(System::Object^ sender, System::EventArgs^ e);
+
+	private: System::Void decrypt_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }

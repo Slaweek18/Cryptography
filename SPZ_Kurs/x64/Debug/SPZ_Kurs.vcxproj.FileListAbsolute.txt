@@ -2,3 +2,4 @@ C:\Users\admin\source\repos\Cryptography\SPZ_Kurs\SPZ_Kurs\x64\Debug\SPZ_Kurs.vc
 C:\Users\admin\source\repos\Cryptography\SPZ_Kurs\SPZ_Kurs\x64\Debug\SPZ_Kurs.vcxproj.SuggestedBindingRedirects.cache
 C:\Users\admin\source\repos\Cryptography\SPZ_Kurs\SPZ_Kurs\x64\Debug\SPZKurs.MyForm.resources
 C:\Users\admin\source\repos\Cryptography\SPZ_Kurs\SPZ_Kurs\x64\Debug\SPZ_Kurs.vcxproj.GenerateResource.cache
+C:\Users\admin\source\repos\Cryptography\SPZ_Kurs\SPZ_Kurs\x64\Debug\SPZKurs.Encrypt.resources

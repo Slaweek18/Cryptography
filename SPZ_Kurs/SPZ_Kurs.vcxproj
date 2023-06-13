@@ -143,6 +143,9 @@
     <ClInclude Include="Transposition.h" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Encrypt.resx">
+      <DependentUpon>Encrypt.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyForm.resx">
       <DependentUpon>MyForm.h</DependentUpon>
     </EmbeddedResource>
