@@ -12,3 +12,14 @@ System::Void SPZKurs::Encrypt::ïîâåðíóòèñÿÂÃîëîâíåÌåíþToolStripMenuItem_Click(Sy
 	this->Hide();
 	form->Show();
 }
+
+System::Void SPZKurs::Encrypt::openFileEnc_Click_1(System::Object^ sender, System::EventArgs^ e)
+{
+	String^ FileName = "";
+	if (openFileDialog1->ShowDialog() == Windows::Forms::DialogResult::OK) {
+		FileName = openFileDialog1->FileName;
+		pathFile->Text = FileName;
+
+	}
+}
+

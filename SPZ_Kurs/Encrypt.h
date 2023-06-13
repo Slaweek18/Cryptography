@@ -39,7 +39,10 @@ namespace SPZKurs {
 	private: System::Windows::Forms::ToolStripMenuItem^ повернутисяВГоловнеМенюToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ вийтиЗПрограмиToolStripMenuItem;
 
-	private: System::Windows::Forms::Button^ openFile;
+	private: System::Windows::Forms::OpenFileDialog^ openFileDialog1;
+	private: System::Windows::Forms::TextBox^ pathFile;
+	private: System::Windows::Forms::Button^ openFileEnc;
+
 
 	protected:
 
@@ -61,7 +64,9 @@ namespace SPZKurs {
 			this->вийтиToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->повернутисяВГоловнеМенюToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->вийтиЗПрограмиToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->openFile = (gcnew System::Windows::Forms::Button());
+			this->openFileDialog1 = (gcnew System::Windows::Forms::OpenFileDialog());
+			this->pathFile = (gcnew System::Windows::Forms::TextBox());
+			this->openFileEnc = (gcnew System::Windows::Forms::Button());
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -104,30 +109,54 @@ namespace SPZKurs {
 			this->вийтиЗПрограмиToolStripMenuItem->Text = L"Вийти з програми";
 			this->вийтиЗПрограмиToolStripMenuItem->Click += gcnew System::EventHandler(this, &Encrypt::вийтиЗПрограмиToolStripMenuItem_Click);
 			// 
-			// openFile
+			// openFileDialog1
 			// 
-			this->openFile->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(42)), static_cast<System::Int32>(static_cast<System::Byte>(42)),
+			this->openFileDialog1->FileName = L"openFileDialog1";
+			this->openFileDialog1->Filter = L"Text files(*.txt)|*.txt|All files(*.*)|*.*";
+			// 
+			// pathFile
+			// 
+			this->pathFile->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(42)), static_cast<System::Int32>(static_cast<System::Byte>(42)),
 				static_cast<System::Int32>(static_cast<System::Byte>(42)));
-			this->openFile->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->openFile->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->openFile->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->openFile->Location = System::Drawing::Point(464, 43);
-			this->openFile->Name = L"openFile";
-			this->openFile->Size = System::Drawing::Size(274, 49);
-			this->openFile->TabIndex = 1;
-			this->openFile->Text = L"Вибрати файл";
-			this->openFile->UseVisualStyleBackColor = false;
-			this->openFile->UseWaitCursor = true;
+			this->pathFile->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->pathFile->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->pathFile->ForeColor = System::Drawing::SystemColors::ControlLightLight;
+			this->pathFile->Location = System::Drawing::Point(391, 99);
+			this->pathFile->MaximumSize = System::Drawing::Size(400, 30);
+			this->pathFile->Multiline = true;
+			this->pathFile->Name = L"pathFile";
+			this->pathFile->ReadOnly = true;
+			this->pathFile->Size = System::Drawing::Size(400, 30);
+			this->pathFile->TabIndex = 2;
+			// 
+			// openFileEnc
+			// 
+			this->openFileEnc->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(42)), static_cast<System::Int32>(static_cast<System::Byte>(42)),
+				static_cast<System::Int32>(static_cast<System::Byte>(42)));
+			this->openFileEnc->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->openFileEnc->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->openFileEnc->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->openFileEnc->ForeColor = System::Drawing::SystemColors::ControlLightLight;
+			this->openFileEnc->Location = System::Drawing::Point(466, 38);
+			this->openFileEnc->Name = L"openFileEnc";
+			this->openFileEnc->Size = System::Drawing::Size(260, 45);
+			this->openFileEnc->TabIndex = 3;
+			this->openFileEnc->Text = L"Вибрати файл";
+			this->openFileEnc->UseVisualStyleBackColor = false;
+			this->openFileEnc->Click += gcnew System::EventHandler(this, &Encrypt::openFileEnc_Click_1);
 			// 
 			// Encrypt
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1205, 573);
-			this->Controls->Add(this->openFile);
+			this->Controls->Add(this->openFileEnc);
+			this->Controls->Add(this->pathFile);
 			this->Controls->Add(this->menuStrip1);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MainMenuStrip = this->menuStrip1;
@@ -149,5 +178,6 @@ namespace SPZKurs {
 	}
 	private: System::Void вийтиЗПрограмиToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void повернутисяВГоловнеМенюToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void openFileEnc_Click_1(System::Object^ sender, System::EventArgs^ e);
 };
 }
