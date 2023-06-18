@@ -1,4 +1,7 @@
 #pragma once
+#include "Header.h"
+#include"Encrypt.h"
+#include"Decrypt.h"
 
 namespace SPZKurs {
 
@@ -165,7 +168,6 @@ namespace SPZKurs {
 #pragma endregion
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
-
 
 	private: System::Void ‚Ëı≥‰ToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
 

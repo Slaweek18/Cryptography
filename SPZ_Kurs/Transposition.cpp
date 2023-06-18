@@ -1,6 +1,6 @@
 #include "Transposition.h"
 
-std::vector<int> Transposition::getKey()
+std::vector<int>  Transposition::getKey()
 {
     return key;
 }

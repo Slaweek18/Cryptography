@@ -1,6 +1,7 @@
 #pragma once
 #include"Header.h"
 extern int sizeFile;
+
 class Transposition
 {
 private:

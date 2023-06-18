@@ -8,7 +8,6 @@
 #include <algorithm>
 #include <filesystem>
 #include <random>
-#include "Transposition.h"
-#include "Feistel.h"
+
 
 

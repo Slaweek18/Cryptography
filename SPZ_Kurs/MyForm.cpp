@@ -1,12 +1,10 @@
 #include "MyForm.h"
-#include "Header.h"
-#include"Encrypt.h"
-#include"Decrypt.h"
-
 using namespace System;
 using namespace System::Windows::Forms;
-int sizeFile;
+
+int sizeFile=0;
 [STAThreadAttribute]
+
 void main(array<String^>^ args)
 {
 	Application::EnableVisualStyles();

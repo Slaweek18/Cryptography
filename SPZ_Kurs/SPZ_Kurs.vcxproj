@@ -83,7 +83,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies />
-      <SubSystem>NotSet</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <EntryPointSymbol>main</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
@@ -125,6 +125,7 @@
     <ClCompile Include="Decrypt.cpp" />
     <ClCompile Include="Encrypt.cpp" />
     <ClCompile Include="Feistel.cpp" />
+    <ClCompile Include="Functions.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="Transposition.cpp" />
   </ItemGroup>
@@ -136,6 +137,7 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Feistel.h" />
+    <ClInclude Include="Functions.h" />
     <ClInclude Include="Header.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
@@ -143,6 +145,9 @@
     <ClInclude Include="Transposition.h" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Decrypt.resx">
+      <DependentUpon>Decrypt.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Encrypt.resx">
       <DependentUpon>Encrypt.h</DependentUpon>
     </EmbeddedResource>
