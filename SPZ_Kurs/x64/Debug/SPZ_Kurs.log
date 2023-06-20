@@ -1,3 +1,5 @@
-﻿  Decrypt.cpp
+﻿  Encrypt.cpp
+C:\Users\admin\source\repos\Cryptography\SPZ_Kurs\SPZ_Kurs\Encrypt.cpp(8,42): warning C4302: <function-style-cast>: усечение из "const char *" к "unsigned char"
+C:\Users\admin\source\repos\Cryptography\SPZ_Kurs\SPZ_Kurs\Encrypt.cpp(86,23): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
   Decrypt.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
   SPZ_Kurs.vcxproj -> C:\Users\admin\source\repos\Cryptography\SPZ_Kurs\x64\Debug\SPZ_Kurs.exe

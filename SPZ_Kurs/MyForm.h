@@ -68,7 +68,7 @@ namespace SPZKurs {
 			// 
 			// menuStrip1
 			// 
-			this->menuStrip1->BackColor = System::Drawing::SystemColors::Desktop;
+			this->menuStrip1->BackColor = System::Drawing::Color::Transparent;
 			this->menuStrip1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->menuStrip1->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -78,25 +78,27 @@ namespace SPZKurs {
 					this->ïðîÏðîãðàìóToolStripMenuItem
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
-			this->menuStrip1->MaximumSize = System::Drawing::Size(245, 41);
+			this->menuStrip1->MaximumSize = System::Drawing::Size(200, 41);
 			this->menuStrip1->Name = L"menuStrip1";
 			this->menuStrip1->Padding = System::Windows::Forms::Padding(9, 2, 0, 2);
-			this->menuStrip1->Size = System::Drawing::Size(245, 33);
+			this->menuStrip1->Size = System::Drawing::Size(200, 33);
 			this->menuStrip1->Stretch = false;
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
 			// âèõ³äToolStripMenuItem
 			// 
-			this->âèõ³äToolStripMenuItem->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->âèõ³äToolStripMenuItem->ForeColor = System::Drawing::SystemColors::Control;
 			this->âèõ³äToolStripMenuItem->Name = L"âèõ³äToolStripMenuItem";
 			this->âèõ³äToolStripMenuItem->Size = System::Drawing::Size(75, 29);
 			this->âèõ³äToolStripMenuItem->Text = L"Âèõ³ä";
+			this->âèõ³äToolStripMenuItem->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->âèõ³äToolStripMenuItem->TextImageRelation = System::Windows::Forms::TextImageRelation::Overlay;
 			this->âèõ³äToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::âèõ³äToolStripMenuItem_Click);
 			// 
 			// ïðîÏðîãðàìóToolStripMenuItem
 			// 
-			this->ïðîÏðîãðàìóToolStripMenuItem->ForeColor = System::Drawing::SystemColors::ControlLightLight;
+			this->ïðîÏðîãðàìóToolStripMenuItem->ForeColor = System::Drawing::SystemColors::Control;
 			this->ïðîÏðîãðàìóToolStripMenuItem->Name = L"ïðîÏðîãðàìóToolStripMenuItem";
 			this->ïðîÏðîãðàìóToolStripMenuItem->Size = System::Drawing::Size(155, 29);
 			this->ïðîÏðîãðàìóToolStripMenuItem->Text = L"Ïðî ïðîãðàìó";
@@ -107,13 +109,18 @@ namespace SPZKurs {
 			this->encrypt->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(42)), static_cast<System::Int32>(static_cast<System::Byte>(42)),
 				static_cast<System::Int32>(static_cast<System::Byte>(42)));
 			this->encrypt->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->encrypt->FlatAppearance->BorderColor = System::Drawing::SystemColors::ControlLight;
+			this->encrypt->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(72)),
+				static_cast<System::Int32>(static_cast<System::Byte>(72)), static_cast<System::Int32>(static_cast<System::Byte>(72)));
+			this->encrypt->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(72)),
+				static_cast<System::Int32>(static_cast<System::Byte>(72)), static_cast<System::Int32>(static_cast<System::Byte>(72)));
 			this->encrypt->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->encrypt->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->encrypt->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->encrypt->Location = System::Drawing::Point(325, 206);
+			this->encrypt->Font = (gcnew System::Drawing::Font(L"Arial Unicode MS", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->encrypt->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->encrypt->Location = System::Drawing::Point(281, 158);
 			this->encrypt->Name = L"encrypt";
-			this->encrypt->Size = System::Drawing::Size(299, 52);
+			this->encrypt->Size = System::Drawing::Size(254, 50);
 			this->encrypt->TabIndex = 1;
 			this->encrypt->Text = L"Øèôðóâàòè";
 			this->encrypt->UseVisualStyleBackColor = false;
@@ -124,13 +131,19 @@ namespace SPZKurs {
 			this->decrypt->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(42)), static_cast<System::Int32>(static_cast<System::Byte>(42)),
 				static_cast<System::Int32>(static_cast<System::Byte>(42)));
 			this->decrypt->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->decrypt->FlatAppearance->BorderColor = System::Drawing::SystemColors::ControlLight;
+			this->decrypt->FlatAppearance->BorderSize = 2;
+			this->decrypt->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(72)),
+				static_cast<System::Int32>(static_cast<System::Byte>(72)), static_cast<System::Int32>(static_cast<System::Byte>(72)));
+			this->decrypt->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(72)),
+				static_cast<System::Int32>(static_cast<System::Byte>(72)), static_cast<System::Int32>(static_cast<System::Byte>(72)));
 			this->decrypt->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->decrypt->Font = (gcnew System::Drawing::Font(L"Microsoft Tai Le", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->decrypt->ForeColor = System::Drawing::SystemColors::ButtonFace;
-			this->decrypt->Location = System::Drawing::Point(325, 314);
+			this->decrypt->Font = (gcnew System::Drawing::Font(L"Arial Unicode MS", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->decrypt->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->decrypt->Location = System::Drawing::Point(281, 244);
 			this->decrypt->Name = L"decrypt";
-			this->decrypt->Size = System::Drawing::Size(299, 52);
+			this->decrypt->Size = System::Drawing::Size(254, 52);
 			this->decrypt->TabIndex = 2;
 			this->decrypt->Text = L"Äåøèôðóâàòè";
 			this->decrypt->UseVisualStyleBackColor = false;
@@ -143,7 +156,7 @@ namespace SPZKurs {
 			this->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(904, 450);
+			this->ClientSize = System::Drawing::Size(795, 390);
 			this->Controls->Add(this->decrypt);
 			this->Controls->Add(this->encrypt);
 			this->Controls->Add(this->menuStrip1);
@@ -153,11 +166,12 @@ namespace SPZKurs {
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MainMenuStrip = this->menuStrip1;
 			this->MaximizeBox = false;
-			this->MaximumSize = System::Drawing::Size(922, 497);
-			this->MinimumSize = System::Drawing::Size(922, 497);
+			this->MaximumSize = System::Drawing::Size(813, 437);
+			this->MinimumSize = System::Drawing::Size(813, 437);
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"CryptoWeek";
+			this->TransparencyKey = System::Drawing::SystemColors::ButtonShadow;
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();

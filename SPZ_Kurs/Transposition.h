@@ -8,6 +8,9 @@ private:
 	std::vector<int> key;
 
 public:
+
+	void resetKey();
+
 	std::vector<int> getKey();
 
 	void generateKey();

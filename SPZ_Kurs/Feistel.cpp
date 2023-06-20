@@ -1,5 +1,10 @@
 #include "Feistel.h"
 
+void Feistel::setKey(unsigned char y)
+{
+    this->key = y;
+}
+
 unsigned char Feistel::getKey()
 {
     return key;

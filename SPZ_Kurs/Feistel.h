@@ -7,6 +7,9 @@ private:
 	unsigned char key;
 
 public:
+
+	void setKey(unsigned char y);
+
 	unsigned char getKey();
 
 	// Функція, яка повертає результат роботи блоку зсуву

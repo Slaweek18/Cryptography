@@ -4,7 +4,7 @@ HANDLE createFileKey(LPCSTR pathKey) {
 	HANDLE hkey = CreateFileA(pathKey, GENERIC_READ | GENERIC_WRITE, 0, NULL, OPEN_ALWAYS, FILE_ATTRIBUTE_HIDDEN, NULL);
 	if (hkey == INVALID_HANDLE_VALUE)
 	{
-		MessageBox::Show("Файл не вдалося відкрити", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		MessageBox::Show("Файл ключа не вдалося відкрити", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
 
 	}
 	return hkey;

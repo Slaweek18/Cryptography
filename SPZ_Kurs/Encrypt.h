@@ -36,10 +36,6 @@ namespace SPZKurs {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::MenuStrip^ menuStrip1;
-	private: System::Windows::Forms::ToolStripMenuItem^ âèéòèToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ ïîâåðíóòèñÿÂÃîëîâíåÌåíþToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ âèéòèÇÏðîãðàìèToolStripMenuItem;
 
 	private: System::Windows::Forms::OpenFileDialog^ openFileDialog1;
 	private: System::Windows::Forms::TextBox^ PathFile;
@@ -51,6 +47,18 @@ namespace SPZKurs {
 	private: System::Windows::Forms::TextBox^ textBoxKey;
 
 	private: System::Windows::Forms::Button^ buttonEncrypt;
+
+
+	private: System::Windows::Forms::ToolStripMenuItem^ ïîâåðíóòèñÿÂÃîëîâíåÌåíþToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ âèéòèÇÏðîãðàìèToolStripMenuItem;
+	private: System::Windows::Forms::MenuStrip^ menuStrip1;
+	private: System::Windows::Forms::ToolStripMenuItem^ âèõ³äToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem1;
+	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem2;
+
+
+	private: System::Windows::Forms::ToolStripMenuItem^ ïðîÂ³êíîToolStripMenuItem;
+	private: System::Windows::Forms::GroupBox^ groupBox1;
 
 	protected:
 
@@ -68,10 +76,6 @@ namespace SPZKurs {
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Encrypt::typeid));
-			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
-			this->âèéòèToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->ïîâåðíóòèñÿÂÃîëîâíåÌåíþToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->âèéòèÇÏðîãðàìèToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->openFileDialog1 = (gcnew System::Windows::Forms::OpenFileDialog());
 			this->PathFile = (gcnew System::Windows::Forms::TextBox());
 			this->openFileEnc = (gcnew System::Windows::Forms::Button());
@@ -80,62 +84,30 @@ namespace SPZKurs {
 			this->buttonKey = (gcnew System::Windows::Forms::Button());
 			this->textBoxKey = (gcnew System::Windows::Forms::TextBox());
 			this->buttonEncrypt = (gcnew System::Windows::Forms::Button());
+			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
+			this->âèõ³äToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->toolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->toolStripMenuItem2 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->ïðîÂ³êíîToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->menuStrip1->SuspendLayout();
+			this->groupBox1->SuspendLayout();
 			this->SuspendLayout();
-			// 
-			// menuStrip1
-			// 
-			this->menuStrip1->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->menuStrip1->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->menuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
-			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->âèéòèToolStripMenuItem });
-			this->menuStrip1->Location = System::Drawing::Point(0, 0);
-			this->menuStrip1->MaximumSize = System::Drawing::Size(90, 41);
-			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(90, 33);
-			this->menuStrip1->TabIndex = 0;
-			this->menuStrip1->Text = L"menuStrip1";
-			// 
-			// âèéòèToolStripMenuItem
-			// 
-			this->âèéòèToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
-				this->ïîâåðíóòèñÿÂÃîëîâíåÌåíþToolStripMenuItem,
-					this->âèéòèÇÏðîãðàìèToolStripMenuItem
-			});
-			this->âèéòèToolStripMenuItem->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->âèéòèToolStripMenuItem->Name = L"âèéòèToolStripMenuItem";
-			this->âèéòèToolStripMenuItem->Size = System::Drawing::Size(75, 29);
-			this->âèéòèToolStripMenuItem->Text = L"Âèõ³ä";
-			// 
-			// ïîâåðíóòèñÿÂÃîëîâíåÌåíþToolStripMenuItem
-			// 
-			this->ïîâåðíóòèñÿÂÃîëîâíåÌåíþToolStripMenuItem->Name = L"ïîâåðíóòèñÿÂÃîëîâíåÌåíþToolStripMenuItem";
-			this->ïîâåðíóòèñÿÂÃîëîâíåÌåíþToolStripMenuItem->Size = System::Drawing::Size(372, 30);
-			this->ïîâåðíóòèñÿÂÃîëîâíåÌåíþToolStripMenuItem->Text = L"Ïîâåðíóòèñÿ â ãîëîâíå ìåíþ";
-			this->ïîâåðíóòèñÿÂÃîëîâíåÌåíþToolStripMenuItem->Click += gcnew System::EventHandler(this, &Encrypt::ïîâåðíóòèñÿÂÃîëîâíåÌåíþToolStripMenuItem_Click);
-			// 
-			// âèéòèÇÏðîãðàìèToolStripMenuItem
-			// 
-			this->âèéòèÇÏðîãðàìèToolStripMenuItem->Name = L"âèéòèÇÏðîãðàìèToolStripMenuItem";
-			this->âèéòèÇÏðîãðàìèToolStripMenuItem->Size = System::Drawing::Size(372, 30);
-			this->âèéòèÇÏðîãðàìèToolStripMenuItem->Text = L"Âèéòè ç ïðîãðàìè";
-			this->âèéòèÇÏðîãðàìèToolStripMenuItem->Click += gcnew System::EventHandler(this, &Encrypt::âèéòèÇÏðîãðàìèToolStripMenuItem_Click);
 			// 
 			// openFileDialog1
 			// 
 			this->openFileDialog1->FileName = L"openFileDialog1";
-			this->openFileDialog1->Filter = L"Text files(*.txt)|*.txt|All files(*.*)|*.*";
+			this->openFileDialog1->Filter = L"Text files(*.txt)|*.txt";
 			// 
 			// PathFile
 			// 
 			this->PathFile->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(42)), static_cast<System::Int32>(static_cast<System::Byte>(42)),
 				static_cast<System::Int32>(static_cast<System::Byte>(42)));
-			this->PathFile->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->PathFile->Cursor = System::Windows::Forms::Cursors::Default;
 			this->PathFile->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->PathFile->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->PathFile->Location = System::Drawing::Point(390, 105);
+			this->PathFile->Location = System::Drawing::Point(426, 106);
 			this->PathFile->MaximumSize = System::Drawing::Size(400, 30);
 			this->PathFile->Multiline = true;
 			this->PathFile->Name = L"PathFile";
@@ -152,7 +124,7 @@ namespace SPZKurs {
 			this->openFileEnc->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->openFileEnc->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->openFileEnc->Location = System::Drawing::Point(466, 38);
+			this->openFileEnc->Location = System::Drawing::Point(501, 43);
 			this->openFileEnc->Name = L"openFileEnc";
 			this->openFileEnc->Size = System::Drawing::Size(260, 45);
 			this->openFileEnc->TabIndex = 3;
@@ -169,7 +141,7 @@ namespace SPZKurs {
 			this->radioFeist->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->radioFeist->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->radioFeist->Location = System::Drawing::Point(668, 264);
+			this->radioFeist->Location = System::Drawing::Point(367, 47);
 			this->radioFeist->Name = L"radioFeist";
 			this->radioFeist->Size = System::Drawing::Size(158, 33);
 			this->radioFeist->TabIndex = 4;
@@ -182,10 +154,11 @@ namespace SPZKurs {
 			this->radioTrans->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(42)), static_cast<System::Int32>(static_cast<System::Byte>(42)),
 				static_cast<System::Int32>(static_cast<System::Byte>(42)));
 			this->radioTrans->Checked = true;
+			this->radioTrans->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->radioTrans->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->radioTrans->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->radioTrans->Location = System::Drawing::Point(358, 264);
+			this->radioTrans->Location = System::Drawing::Point(15, 47);
 			this->radioTrans->Name = L"radioTrans";
 			this->radioTrans->Size = System::Drawing::Size(253, 33);
 			this->radioTrans->TabIndex = 5;
@@ -202,7 +175,7 @@ namespace SPZKurs {
 			this->buttonKey->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->buttonKey->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->buttonKey->Location = System::Drawing::Point(466, 343);
+			this->buttonKey->Location = System::Drawing::Point(501, 343);
 			this->buttonKey->Name = L"buttonKey";
 			this->buttonKey->Size = System::Drawing::Size(260, 45);
 			this->buttonKey->TabIndex = 6;
@@ -214,15 +187,15 @@ namespace SPZKurs {
 			// 
 			this->textBoxKey->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(42)), static_cast<System::Int32>(static_cast<System::Byte>(42)),
 				static_cast<System::Int32>(static_cast<System::Byte>(42)));
-			this->textBoxKey->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->textBoxKey->Cursor = System::Windows::Forms::Cursors::Default;
 			this->textBoxKey->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->textBoxKey->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->textBoxKey->Location = System::Drawing::Point(358, 403);
+			this->textBoxKey->Location = System::Drawing::Point(368, 406);
 			this->textBoxKey->Multiline = true;
 			this->textBoxKey->Name = L"textBoxKey";
 			this->textBoxKey->ReadOnly = true;
-			this->textBoxKey->Size = System::Drawing::Size(468, 40);
+			this->textBoxKey->Size = System::Drawing::Size(515, 40);
 			this->textBoxKey->TabIndex = 7;
 			// 
 			// buttonEncrypt
@@ -233,13 +206,83 @@ namespace SPZKurs {
 			this->buttonEncrypt->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->buttonEncrypt->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->buttonEncrypt->Location = System::Drawing::Point(466, 478);
+			this->buttonEncrypt->Location = System::Drawing::Point(501, 473);
 			this->buttonEncrypt->Name = L"buttonEncrypt";
 			this->buttonEncrypt->Size = System::Drawing::Size(260, 60);
 			this->buttonEncrypt->TabIndex = 8;
 			this->buttonEncrypt->Text = L"Çàøèôðóâàòè";
 			this->buttonEncrypt->UseVisualStyleBackColor = false;
 			this->buttonEncrypt->Click += gcnew System::EventHandler(this, &Encrypt::buttonEncrypt_Click);
+			// 
+			// menuStrip1
+			// 
+			this->menuStrip1->BackColor = System::Drawing::Color::Transparent;
+			this->menuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
+			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+				this->âèõ³äToolStripMenuItem,
+					this->ïðîÂ³êíîToolStripMenuItem
+			});
+			this->menuStrip1->Location = System::Drawing::Point(0, 0);
+			this->menuStrip1->MaximumSize = System::Drawing::Size(250, 42);
+			this->menuStrip1->Name = L"menuStrip1";
+			this->menuStrip1->Size = System::Drawing::Size(250, 33);
+			this->menuStrip1->TabIndex = 9;
+			this->menuStrip1->Text = L"menuStrip1";
+			// 
+			// âèõ³äToolStripMenuItem
+			// 
+			this->âèõ³äToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+				this->toolStripMenuItem1,
+					this->toolStripMenuItem2
+			});
+			this->âèõ³äToolStripMenuItem->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei", 12, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->âèõ³äToolStripMenuItem->ForeColor = System::Drawing::SystemColors::Control;
+			this->âèõ³äToolStripMenuItem->Name = L"âèõ³äToolStripMenuItem";
+			this->âèõ³äToolStripMenuItem->Size = System::Drawing::Size(75, 29);
+			this->âèõ³äToolStripMenuItem->Text = L"Âèõ³ä";
+			// 
+			// toolStripMenuItem1
+			// 
+			this->toolStripMenuItem1->Name = L"toolStripMenuItem1";
+			this->toolStripMenuItem1->Size = System::Drawing::Size(372, 30);
+			this->toolStripMenuItem1->Text = L"Ïîâåðíóòèñÿ â ãîëîâíå ìåíþ";
+			this->toolStripMenuItem1->Click += gcnew System::EventHandler(this, &Encrypt::toolStripMenuItem1_Click);
+			// 
+			// toolStripMenuItem2
+			// 
+			this->toolStripMenuItem2->Name = L"toolStripMenuItem2";
+			this->toolStripMenuItem2->Size = System::Drawing::Size(372, 30);
+			this->toolStripMenuItem2->Text = L"Âèéòè ç ïðîãðàìè";
+			this->toolStripMenuItem2->Click += gcnew System::EventHandler(this, &Encrypt::toolStripMenuItem2_Click);
+			// 
+			// ïðîÂ³êíîToolStripMenuItem
+			// 
+			this->ïðîÂ³êíîToolStripMenuItem->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei", 12, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->ïðîÂ³êíîToolStripMenuItem->ForeColor = System::Drawing::SystemColors::Control;
+			this->ïðîÂ³êíîToolStripMenuItem->Name = L"ïðîÂ³êíîToolStripMenuItem";
+			this->ïðîÂ³êíîToolStripMenuItem->Size = System::Drawing::Size(113, 29);
+			this->ïðîÂ³êíîToolStripMenuItem->Text = L"Ïðî â³êíî";
+			this->ïðîÂ³êíîToolStripMenuItem->Click += gcnew System::EventHandler(this, &Encrypt::ïðîÂ³êíîToolStripMenuItem_Click);
+			// 
+			// groupBox1
+			// 
+			this->groupBox1->BackColor = System::Drawing::Color::Transparent;
+			this->groupBox1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->groupBox1->Controls->Add(this->radioFeist);
+			this->groupBox1->Controls->Add(this->radioTrans);
+			this->groupBox1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->groupBox1->Font = (gcnew System::Drawing::Font(L"Arial Black", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->groupBox1->ForeColor = System::Drawing::Color::Gold;
+			this->groupBox1->Location = System::Drawing::Point(358, 197);
+			this->groupBox1->Name = L"groupBox1";
+			this->groupBox1->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->groupBox1->Size = System::Drawing::Size(533, 111);
+			this->groupBox1->TabIndex = 10;
+			this->groupBox1->TabStop = false;
+			this->groupBox1->Text = L"Ìåòîä øèôðóâàííÿ";
 			// 
 			// Encrypt
 			// 
@@ -248,26 +291,26 @@ namespace SPZKurs {
 			this->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(1205, 573);
+			this->ClientSize = System::Drawing::Size(1255, 573);
+			this->Controls->Add(this->groupBox1);
 			this->Controls->Add(this->buttonEncrypt);
 			this->Controls->Add(this->textBoxKey);
 			this->Controls->Add(this->buttonKey);
-			this->Controls->Add(this->radioTrans);
-			this->Controls->Add(this->radioFeist);
 			this->Controls->Add(this->openFileEnc);
 			this->Controls->Add(this->PathFile);
 			this->Controls->Add(this->menuStrip1);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
-			this->MainMenuStrip = this->menuStrip1;
 			this->MaximizeBox = false;
-			this->MaximumSize = System::Drawing::Size(1223, 620);
-			this->MinimumSize = System::Drawing::Size(1223, 620);
+			this->MaximumSize = System::Drawing::Size(1273, 620);
+			this->MinimumSize = System::Drawing::Size(1273, 620);
 			this->Name = L"Encrypt";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Encrypt";
 			this->Load += gcnew System::EventHandler(this, &Encrypt::Encrypt_Load);
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
+			this->groupBox1->ResumeLayout(false);
+			this->groupBox1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -275,11 +318,14 @@ namespace SPZKurs {
 #pragma endregion
 	private: System::Void Encrypt_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
-	private: System::Void âèéòèÇÏðîãðàìèToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
-	private: System::Void ïîâåðíóòèñÿÂÃîëîâíåÌåíþToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void openFileEnc_Click_1(System::Object^ sender, System::EventArgs^ e);
 
 	private: System::Void buttonKey_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void buttonEncrypt_Click(System::Object^ sender, System::EventArgs^ e);
+
+	private: System::Void toolStripMenuItem1_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void toolStripMenuItem2_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void ïðîÂ³êíîToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
+
 };
 }

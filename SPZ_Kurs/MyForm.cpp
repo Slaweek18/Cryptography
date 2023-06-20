@@ -21,7 +21,8 @@ System::Void SPZKurs::MyForm::вихідToolStripMenuItem_Click(System::Object^ sende
 
 System::Void SPZKurs::MyForm::проПрограмуToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	MessageBox::Show("Ця програма надає функції шифрування та дешифрування файлів формату .txt","Information");
+	MessageBox::Show("Програма реалізує шифрування та розшифрування файлів(формату txt)\
+ за допомогою двох методів - методу Фейстеля (Feistel) та методу транспозиції (Transposition).","Information");
 }
 
 System::Void SPZKurs::MyForm::encrypt_Click(System::Object^ sender, System::EventArgs^ e)
@@ -29,7 +30,6 @@ System::Void SPZKurs::MyForm::encrypt_Click(System::Object^ sender, System::Even
 	Encrypt^ form = gcnew Encrypt();
 	this->Hide();
 	form->Show();
-	
 }
 
 System::Void SPZKurs::MyForm::decrypt_Click(System::Object^ sender, System::EventArgs^ e)

@@ -1,5 +1,11 @@
 #include "Transposition.h"
 
+void Transposition::resetKey()
+{
+    this->key.clear();
+}
+
+
 std::vector<int>  Transposition::getKey()
 {
     return key;
@@ -8,7 +14,6 @@ std::vector<int>  Transposition::getKey()
 void Transposition::generateKey()
 {
     // генеруємо ключ мін - 2, макс - 30
-    srand(time(NULL));
     int keyLength = (rand() % 29 + 2);
     keyLength = (keyLength > sizeFile) ? ((keyLength % sizeFile) == 0 ? sizeFile : keyLength % sizeFile) : keyLength;
 
